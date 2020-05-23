@@ -40,6 +40,8 @@ server <- function(input, output, session) {
             addProviderTiles(providers$OpenStreetMap)
     })   
     
+    # End application after closing a window or tab
+    session$onSessionEnded(stopApp)
 }
 
 # Run the application 
